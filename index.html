@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Crosswording</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+
+<body onload="startup()">
+    <div id="createNewGrid" class="container">
+        <div class="control">
+            <label for="height">Rows:</label>
+            <input type="text" id="height" name="height" maxlength="2" size="2" value="15" onkeyup="numRowColInputKeyPress(event)" onblur="updateDims(event)"></input>
+        </div>
+        <div class="control">
+            <div id="linkIconCell" class="icon iconOn" onclick="updateLinked()">
+                <i id="linkIcon" class="material-icons md-18">link</i>
+            </div>
+        </div>
+        <div class="control">
+            <label for="width">Columns:</label>
+            <input type="text" id="width" name="width" maxlength="2" size="2" value="15" onkeyup="numRowColInputKeyPress(event)" onblur="updateDims(event)"></input>
+        </div>
+        <div class="control">
+            <div>
+                <button type="button" onclick="newPuzzle(event)">Go</button>
+            </div>
+        </div>
+        <div class="control">
+            <div>
+                <button id="cancelNew" type="button" onclick="controlVisibility(event)">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div id="gridSettings" class="container">
+        <div class="control">
+            <div id="newGridDiv" class="icon iconOff" onmouseup="controlVisibility(event)">
+                <i id="newGridIcon" class="material-icons md-18">grid_on</i>
+            </div>
+        </div>
+        <div class="control">
+            <div id="dirIconDiv" class="icon iconOff" onmouseup="updateDirection()">
+                <i id="dirIcon" class="material-icons md-18">swap_horiz</i>
+            </div>
+        </div>
+        <div class="control">
+            <div id="syncDiv" class="icon iconOn" onmouseup="updateSync()">
+                <i id="syncIcon" class="material-icons md-18">sync</i>
+            </div>
+        </div>
+        <div class="control">
+            <div id="saveIconDiv" class="icon iconOff" onmouseup="savePuzzle()">
+                <i id="saveIcon" class="material-icons md-18">save</i>
+            </div>
+        </div>
+        <div class="control">
+            <div id="loadIconDiv" class="icon iconOff" onmouseup="controlVisibility(event)">
+                <i id="loadIcon" class="material-icons md-18">folder_open</i>
+            </div>
+        </div>
+        <div id="numWords" class="control"></div>
+        <div id="numBlocks" class="control"></div>
+    </div>
+    <div id="loadGrid" class="container">
+        <div class="control">
+            <input type="file" id="gridFileInput" accept=".json" onchange="updateLoadButton()"></input>
+        </div>
+        <div class="control">
+            <div class="icon">
+                <button id="loadFile" type="button" onmouseup="loadPuzzle(event)" disabled="true">Load</button>
+            </div>
+        </div>
+        <div class="control">
+            <div class="icon">
+                <button id="cancelLoad" type="button" onmouseup="controlVisibility(event)">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div id="svgContainer" class="container"></div>
+    <div class="container">
+        <div id="acrossTitle" class="answerTitle"></div>
+        <div id="Across" class="answers"></div>
+    </div>
+    <div class="container">
+        <div id="downTitle" class="answerTitle"></div>
+        <div id="Down" class="answers"></div>
+    </div>
+    <div id="puzzleInfo" class="container">
+        <div class="control">
+            <label for="puzzleTitle">Title:</label>
+            <input type="text" id="puzzleTitle" name="puzzleTitle" size="10"></input>
+        </div>
+        <div class="control">
+            <label for="puzzleAuthor">Author:</label>
+            <input type="text" id="puzzleAuthor" name="puzzleAuthor" size="10"></input>
+        </div>
+        <div class="control">
+            <label for="puzzleCopyright">Copyright Info:</label>
+            <input type="text" id="puzzleCopyright" name="puzzleCopyright" size="10"></input>
+        </div>
+    </div>
+</body>
+
+</html>

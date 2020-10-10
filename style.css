@@ -1,0 +1,216 @@
+body {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 12pt;
+}
+
+input, button, textarea {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 10pt;
+    outline: none;
+    background-color: white;
+}
+
+input, textarea {
+    border-right: solid #CDCBCD 2px;
+    border-bottom: solid #CDCBCD 2px;
+    border-left: solid #100007 2px;
+    border-top: solid #100007 2px;
+}
+
+button {
+    border-right: solid #100007 2px;
+    border-bottom: solid #100007 2px;
+    border-left: solid #CDCBCD 2px;
+    border-top: solid #CDCBCD 2px;
+    cursor: pointer;
+}
+
+input:active, input:focus, input:hover, button:hover, textarea:hover, textarea:active, textarea:focus {
+    background-color: #E5EBF0;
+}
+
+button:active {
+    border-right: solid #CDCBCD 2px;
+    border-bottom: solid #CDCBCD 2px;
+    border-left: solid #100007 2px;
+    border-top: solid #100007 2px;
+}
+
+button:disabled {
+    background-color: white;
+}
+
+#puzzleFileInput {
+    font-family: 'Source Code Pro', monospace !important;
+}
+
+#createNewGrid {
+    width: 90%;
+}
+
+#gridSettings {
+    width: 90%;
+    display: none;
+}
+
+#loadGrid {
+    width: 90%;
+    display: none;
+}
+
+.container {
+    display: block;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    float: left;
+}
+
+.answer {
+    padding: 2px 5px;
+}
+
+.clue {
+    outline: none;
+    margin: 10px 0px 10px 45px;
+    padding: 5px;
+    resize: none;
+}
+
+ol {
+    margin:0;
+}
+
+.clue:focus {
+    background-color: #E5EBF0;
+}
+
+#puzzleTitle:hover, #puzzleAuthor:hover {
+    background-color: #E5EBF0;
+}
+
+.answer {
+    word-wrap: break-word;
+}
+
+.answer:hover {
+    background-color: #E5EBF0;
+    cursor: text;
+}
+
+.answers {
+    overflow: auto;
+    width: 250px;
+    margin-right: 20px;
+    border-bottom: 1px solid black;
+    display: none;
+}
+
+.answerTitle {
+    text-align: center;
+}
+
+.control {
+    display: block;
+    padding-left: 10px;
+    float: left;
+}
+
+.box {
+    stroke: black;
+    stroke-width: 1.5px;
+    fill: white;
+}
+
+.cell {
+    stroke: black;
+    stroke-width: 1px;
+    width: 30px;
+    height: 30px;
+}
+
+.cell:hover {
+    fill: #E5EBF0;
+    cursor: text;
+}
+
+.cellInput {
+    height: 25px;
+    width: 23px;
+    text-align: center;
+    /* border-style: hidden; */
+    /* border: 1px rgba(0,0,0,0) solid; */
+    /* border-radius: 0px; */
+}
+
+.icon {
+    text-align: center;
+    font-size: 5px;
+    height: 20px;
+    min-width: 25px;
+    padding: 0px;
+}
+
+.icon:hover {
+    background-color: #E5EBF0;
+}
+
+.icon:active, .icon:focus {
+    background: #E5EBF0;
+    border-right: solid #CDCBCD 2px;
+    border-bottom: solid #CDCBCD 2px;
+    border-left: solid #100007 2px;
+    border-top: solid #100007 2px;
+    cursor: pointer;
+}
+
+.iconOn {
+    background: #E5EBF0;
+    border-right: solid #CDCBCD 2px;
+    border-bottom: solid #CDCBCD 2px;
+    border-left: solid #100007 2px;
+    border-top: solid #100007 2px;
+    cursor: pointer;
+}
+
+.iconOff {
+    background: white;
+    border-right: solid #100007 2px;
+    border-bottom: solid #100007 2px;
+    border-left: solid #CDCBCD 2px;
+    border-top: solid #CDCBCD 2px;
+    cursor: pointer;
+}
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+text {
+    fill:black;
+    font-weight: 750;
+    /* font-family: sans-serif; */
+    text-anchor: middle;
+    alignment-baseline: central;
+}
+
+text.gridContent {
+    font-size: 20px;
+}
+
+text.gridNum {
+    font-size: 10px;
+}
+
+button {
+    width: 100%;
+}
+
+#puzzleInfo {
+    width: 100%;
+    /* padding-top: 15px; */
+    /* text-align: center; */
+}
